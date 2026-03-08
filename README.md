@@ -162,9 +162,9 @@ docker run -d \
 
 ### Kubernetes
 
-All files you will need to deploy this container to kubernetes are located in the [k8s folder](k8s/).
+All files you will need to deploy this container to kubernetes are located in the [kubernetes folder](kubernetes/).
 
-Follow the steps in the [README.md here](k8s/readme.md) to deploy it.
+Follow the steps in the [README.md here](kubernetes/readme.md) to deploy it.
 
 ### Running without root
 
