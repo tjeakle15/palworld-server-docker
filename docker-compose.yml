@@ -6,12 +6,12 @@ services:
     container_name: tj-100-day-challenge
     stop_grace_period: 30s  # Set to however long you are willing to wait for the container to gracefully stop
     ports:
-      - 1515:1515/udp
+      - 8211:8211/udp
       - 27015:27015/udp  # Required if you want your server to show up in the community servers tab
     environment:
       PUID: 1000
       PGID: 1000
-      PORT: 1515  # Optional but recommended
+      PORT: 8211  # Optional but recommended
       PLAYERS: 32  # Optional but recommended
       SERVER_PASSWORD: "L3tM31n!"  # Optional but recommended
       MULTITHREADING: true
