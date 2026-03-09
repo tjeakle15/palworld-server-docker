@@ -3,26 +3,24 @@ services:
   palworld:
     image: thijsvanloef/palworld-server-docker:latest
     restart: unless-stopped
-    container_name: palworld-server
+    container_name: tj-100-day-challenge
     stop_grace_period: 30s  # Set to however long you are willing to wait for the container to gracefully stop
     ports:
-      - 8211:8211/udp
-      - 27015:27015/udp  # Required if you want your server to show up in the community servers tab
-      - 8212:8212/tcp  # REST API enabled port, enabled by default. DO NOT PORT FORWARD THIS.
+      - 1515:1515/udp
     environment:
       PUID: 1000
       PGID: 1000
       PORT: 8211  # Optional but recommended
-      PLAYERS: 16  # Optional but recommended
+      PLAYERS: 32  # Optional but recommended
       SERVER_PASSWORD: "worldofpals"  # Optional but recommended
       MULTITHREADING: true
-      REST_API_ENABLED: true
+      REST_API_ENABLED: false
       REST_API_PORT: 8212
       TZ: "UTC"
-      ADMIN_PASSWORD: "adminPasswordHere"
+      ADMIN_PASSWORD: "L3tM31n!"
       COMMUNITY: false  # Enable this if you want your server to show up in the community servers tab, USE WITH SERVER_PASSWORD!
-      SERVER_NAME: "palworld-server-docker by Thijs van Loef"
-      SERVER_DESCRIPTION: "palworld-server-docker by Thijs van Loef"
+      SERVER_NAME: "tj-100-day-challenge"
+      SERVER_DESCRIPTION: "starts at 100 days challenge but will evolve"
       CROSSPLAY_PLATFORMS: "(Steam,Xbox,PS5,Mac)"
     volumes:
       - ./palworld:/palworld/
