@@ -10,7 +10,7 @@ services:
     environment:
       PUID: 1000
       PGID: 1000
-      PORT: 8211  # Optional but recommended
+      PORT: 1515  # Optional but recommended
       PLAYERS: 32  # Optional but recommended
       SERVER_PASSWORD: "L3tM31n!"  # Optional but recommended
       MULTITHREADING: true
